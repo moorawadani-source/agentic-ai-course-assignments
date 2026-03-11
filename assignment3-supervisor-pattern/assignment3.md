@@ -37,17 +37,9 @@ It drafts clear and professional messages that explain what happened, summarizes
 
 # Supervisor Agent
 
-The supervisor agent coordinates the workflow between all specialized agents.
+The supervisor agent acts as the coordinator of the system. It analyzes the user request, determines which domains are involved, and routes parts of the request to the appropriate sub-agents.
 
-It first analyzes the user request and determines which domain is involved.  
-Then it calls the appropriate sub-agents in the correct order.  
-
-For example:
-1. The supervisor sends the billing part of the request to the Billing Agent.
-2. It sends the login problem to the Technical Support Agent.
-3. Finally, it asks the Communication Agent to draft a response to the customer.
-
-The supervisor then combines the results into a single final answer.
+For example, if a request includes both billing and technical issues, the supervisor can invoke multiple sub-agents and combine their outputs into a single response.
 
 ---
 
